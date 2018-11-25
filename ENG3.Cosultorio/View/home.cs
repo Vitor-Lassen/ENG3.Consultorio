@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ENG3.Cosultorio
+namespace ENG3.Cosultorio.View
 {
-    public partial class Form1 : Form
+    public partial class home : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public home()
         {
             InitializeComponent();
         }

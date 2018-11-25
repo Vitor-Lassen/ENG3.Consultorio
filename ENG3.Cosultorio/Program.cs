@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ENG3.Cosultorio.View;
 
 namespace ENG3.Cosultorio
 {
@@ -16,7 +17,7 @@ namespace ENG3.Cosultorio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new home());
         }
     }
 }

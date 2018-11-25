@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{42B2C656-473F-4997-B8B1-D3939DD71002}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ENG3.Cosultorio</RootNamespace>
-    <AssemblyName>ENG3.Cosultorio</AssemblyName>
+    <RootNamespace>ENG3.Consultorio</RootNamespace>
+    <AssemblyName>ENG3.Consultorio</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -70,6 +70,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\home.resx">
       <DependentUpon>home.cs</DependentUpon>
@@ -87,6 +88,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ENG3.Consultorio.Doman\ENG3.Consultorio.Doman.csproj">
+      <Project>{e18a11f7-a9ff-4605-baa5-c39dbd9e42d7}</Project>
+      <Name>ENG3.Consultorio.Doman</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENG3.Consultorio.Persistence\ENG3.Consultorio.Persistence.csproj">
+      <Project>{7d69f208-6251-47a1-bebd-67599300f237}</Project>
+      <Name>ENG3.Consultorio.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENG3.Consultorio.Repository\ENG3.Consultorio.Repository.csproj">
+      <Project>{22580664-988d-42b0-a391-8aff50bb75bd}</Project>
+      <Name>ENG3.Consultorio.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

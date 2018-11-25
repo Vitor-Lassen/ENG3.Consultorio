@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ENG3.Consultorio.Doman.Entities
 {
-    class Login
+    public class Login
     {
         public int Id { get; set; }
         public string User { get; set; }
         public string Senha { get; set; }
-        public char Àccess { get; set; }
+        public char Access { get; set; }
     }
 }

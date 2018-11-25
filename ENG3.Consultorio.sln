@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENG3.Cosultorio", "ENG3.Cosultorio\ENG3.Cosultorio.csproj", "{42B2C656-473F-4997-B8B1-D3939DD71002}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENG3.Consultorio", "ENG3.Cosultorio\ENG3.Consultorio.csproj", "{42B2C656-473F-4997-B8B1-D3939DD71002}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENG3.Consultorio.Doman", "ENG3.Consultorio.Doman\ENG3.Consultorio.Doman.csproj", "{E18A11F7-A9FF-4605-BAA5-C39DBD9E42D7}"
 EndProject

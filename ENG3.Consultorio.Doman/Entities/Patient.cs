@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ENG3.Consultorio.Doman.Entities
 {
-    class Patient
+    public class Patient
     {
         public long Cpf { get; set; }
         public string Name { get; set; }

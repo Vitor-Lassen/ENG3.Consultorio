@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ENG3.Consultorio.Doman.Entities
 {
-    class Convenio
+    public class Convenio
     {
         public int Id { get; set; }
         public string Name { get; set; }

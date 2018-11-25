@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ENG3.Consultorio.Doman.Entities
 {
-    class Secretary
+    public class Secretary
     {
         public string Cpf { get; set; }
         public string Name { get; set; }

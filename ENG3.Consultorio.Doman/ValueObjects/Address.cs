@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENG3.Consultorio.Doman.ValueObjects
 {
-    class Address
+    public class Address
     {
         public int Id { get; set; }
         public int Cep { get; set; }

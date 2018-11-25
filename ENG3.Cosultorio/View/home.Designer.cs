@@ -1,4 +1,4 @@
-﻿namespace ENG3.Cosultorio.View
+﻿namespace ENG3.Consultorio.View
 {
     partial class home
     {
@@ -77,6 +77,7 @@
             this.metroTile4.TabIndex = 3;
             this.metroTile4.Text = "Paciente ";
             this.metroTile4.UseSelectable = true;
+            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
             // 
             // flowLayoutPanel1
             // 

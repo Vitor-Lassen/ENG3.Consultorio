@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENG3.Consultorio.Doman.Entities
 {
-    class Consulta
+    public class Consulta
     {
         public int Id { get; set; }
         public Secretary Secretary { get; set; }

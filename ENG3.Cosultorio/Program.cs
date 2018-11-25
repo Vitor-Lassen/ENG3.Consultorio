@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ENG3.Cosultorio.View;
+using ENG3.Consultorio.View;
 
-namespace ENG3.Cosultorio
+namespace ENG3.Consultorio
 {
     static class Program
     {

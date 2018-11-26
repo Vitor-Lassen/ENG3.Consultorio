@@ -57,8 +57,10 @@
     <Compile Include="Common\DapperRepositoryBase.cs" />
     <Compile Include="Dapper\AddressDapperRepository.cs" />
     <Compile Include="Dapper\ContactDapperRepository.cs" />
+    <Compile Include="Dapper\ConvenioDapperRepository.cs" />
     <Compile Include="Dapper\DoctorDapperRepository.cs" />
     <Compile Include="Dapper\LoginDapperRepository.cs" />
+    <Compile Include="Dapper\PatientDapperRepository.cs" />
     <Compile Include="Dapper\SecretaryDapperRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

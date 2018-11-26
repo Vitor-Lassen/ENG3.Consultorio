@@ -31,7 +31,7 @@
             this.SecretariaTile = new MetroFramework.Controls.MetroTile();
             this.MedicoTile = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.PacienteTile = new MetroFramework.Controls.MetroTile();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
@@ -70,21 +70,21 @@
             this.metroTile3.Text = "Consulta";
             this.metroTile3.UseSelectable = true;
             // 
-            // metroTile4
+            // PacienteTile
             // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(3, 3);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(150, 150);
-            this.metroTile4.TabIndex = 3;
-            this.metroTile4.Text = "Paciente ";
-            this.metroTile4.UseSelectable = true;
-            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
+            this.PacienteTile.ActiveControl = null;
+            this.PacienteTile.Location = new System.Drawing.Point(3, 3);
+            this.PacienteTile.Name = "PacienteTile";
+            this.PacienteTile.Size = new System.Drawing.Size(150, 150);
+            this.PacienteTile.TabIndex = 3;
+            this.PacienteTile.Text = "Paciente ";
+            this.PacienteTile.UseSelectable = true;
+            this.PacienteTile.Click += new System.EventHandler(this.PacienteTile_Click);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flowLayoutPanel1.Controls.Add(this.metroTile4);
+            this.flowLayoutPanel1.Controls.Add(this.PacienteTile);
             this.flowLayoutPanel1.Controls.Add(this.SecretariaTile);
             this.flowLayoutPanel1.Controls.Add(this.MedicoTile);
             this.flowLayoutPanel1.Controls.Add(this.metroTile3);
@@ -133,7 +133,7 @@
         private MetroFramework.Controls.MetroTile SecretariaTile;
         private MetroFramework.Controls.MetroTile MedicoTile;
         private MetroFramework.Controls.MetroTile metroTile3;
-        private MetroFramework.Controls.MetroTile metroTile4;
+        private MetroFramework.Controls.MetroTile PacienteTile;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private MetroFramework.Controls.MetroTile metroTile5;
         private MetroFramework.Controls.MetroTile metroTile6;

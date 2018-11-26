@@ -11,8 +11,7 @@ namespace ENG3.Consultorio.Doman.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public Address Address { get; set; }
-        public List<Contact> Contacts { get; set; }
+
 
     }
 }

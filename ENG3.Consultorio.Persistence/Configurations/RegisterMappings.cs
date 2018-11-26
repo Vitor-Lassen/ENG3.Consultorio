@@ -20,6 +20,8 @@ namespace ENG3.Consultorio.Persistence.Configurations
                 config.AddMap(new ContactDapperMap());
                 config.AddMap(new DoctorDapperMap());
                 config.AddMap(new SecretaryDapperMap());
+                config.AddMap(new PatientDapperMap());
+                config.AddMap(new ConvenioDapperMap());
                 config.ForDommel();
             });
         }

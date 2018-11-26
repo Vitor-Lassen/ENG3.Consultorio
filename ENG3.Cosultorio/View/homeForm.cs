@@ -20,12 +20,10 @@ namespace ENG3.Consultorio.View
             ENG3.Consultorio.Persistence.Configurations.RegisterMappings.Register();
         }
 
-        private void metroTile4_Click(object sender, EventArgs e)
+        private void PacienteTile_Click(object sender, EventArgs e)
         {
-            ENG3.Consultorio.Persistence.Configurations.RegisterMappings.Register();
-            Login login = new Login() { User = "teste", Password = "ola", Access = 's' };
-            LoginDapperRepository dapperRepository = new LoginDapperRepository();
-            dapperRepository.Add(login);
+            PacienteForm pacienteForm = new PacienteForm();
+            pacienteForm.Show();
         }
 
         private void MedicoTile_Click(object sender, EventArgs e)

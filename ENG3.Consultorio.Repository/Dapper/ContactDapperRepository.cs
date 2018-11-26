@@ -39,5 +39,19 @@ namespace ENG3.Consultorio.Repository.Dapper
 
         }
 
+        public Contact InsetPatientContacts(int cpf, Contact contact)
+        {
+            contact.Id = (int)Add(contact);
+            var sql = "[Insert-Paciente_TELEFONE]";
+            _sqlConnection.Execute(sql, new { cpf, TelefoneId = contact.Id }, commandType: System.Data.CommandType.StoredProcedure);
+            return contact;
+        }
+
+        public IEnumerable<Contact> GetPatientContacts(int cpf)
+        {
+            var sql = "[Select-Contacts-Paciente-byCpf]";
+            return _sqlConnection.Query<Contact>(sql, new { cpf }, commandType: CommandType.StoredProcedure);
+
+        }
     }
 }

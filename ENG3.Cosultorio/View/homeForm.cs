@@ -23,7 +23,7 @@ namespace ENG3.Consultorio.View
         private void metroTile4_Click(object sender, EventArgs e)
         {
             ENG3.Consultorio.Persistence.Configurations.RegisterMappings.Register();
-            Login login = new Login() { User = "teste", Senha = "ola", Access = 's' };
+            Login login = new Login() { User = "teste", Password = "ola", Access = 's' };
             LoginDapperRepository dapperRepository = new LoginDapperRepository();
             dapperRepository.Add(login);
         }

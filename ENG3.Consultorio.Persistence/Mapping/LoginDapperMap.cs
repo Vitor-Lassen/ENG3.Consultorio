@@ -21,7 +21,7 @@ namespace ENG3.Consultorio.Persistence.Mapping
             Map(p => p.User)
                      .ToColumn("USUARIO");
 
-            Map(p => p.Senha)
+            Map(p => p.Password)
                       .ToColumn("SENHA");
 
 

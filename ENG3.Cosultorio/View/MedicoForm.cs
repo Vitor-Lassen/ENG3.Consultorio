@@ -12,16 +12,20 @@ using System.Windows.Forms;
 using ENG3.Consultorio.Doman.ValueObjects;
 using ENG3.Consultorio.Doman.Enums;
 using ENG3.Consultorio.Repository.Dapper;
+using ENG3.Consultorio.ApplicationService.Services;
 
 namespace ENG3.Consultorio.View
 {
     public partial class MedicoForm : MetroFramework.Forms.MetroForm
     {
-        Doctor _doctor;
+        Doctor _doctor = new Doctor();
+        bool _doctorArealyExistsInDataBase;
         LoginDapperRepository _loginDapperRepository = new LoginDapperRepository();
         AddressDapperRepository _addressDapperRepository = new AddressDapperRepository();
         ContactDapperRepository _contactDapperRepository = new ContactDapperRepository();
         DoctorDapperRepository _doctorDapperRepository = new DoctorDapperRepository();
+        ViaCepServices _viaCepServices = new ViaCepServices();
+
         public MedicoForm()
         {
             InitializeComponent();
@@ -29,15 +33,12 @@ namespace ENG3.Consultorio.View
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            
-            if (_doctor == null)
-                _doctor = new Doctor();
 
             _doctor.Name = NameTxt.Text;
             _doctor.Crm = CrmTxt.Text.NumbersOnly();
             _doctor.Specialty = SpecialityTxt.Text;
             _doctor.Login.User = UserTxt.Text;
-            _doctor.Login.Senha = SenhaTxt.Text;
+            _doctor.Login.Password = SenhaTxt.Text;
             _doctor.Login.Access = 'd';
             _doctor.Address.Cep = CepTxt.Text.NumbersOnly();
             _doctor.Address.Complemento = AddressCompTxt.Text;
@@ -50,13 +51,17 @@ namespace ENG3.Consultorio.View
             else
                 _loginDapperRepository.Update(_doctor.Login);
             _doctor.LoginId = _doctor.Login.Id;
+
             if (_doctor.Address.Id == 0)
                 _doctor.Address.Id = (int)_addressDapperRepository.Add(_doctor.Address);
             else
                 _addressDapperRepository.Update(_doctor.Address);
             _doctor.AddressId = _doctor.Address.Id;
 
-            _doctorDapperRepository.Add(_doctor);
+            if (_doctorArealyExistsInDataBase)
+                _doctorDapperRepository.Update(_doctor);
+            else 
+                _doctorDapperRepository.Add(_doctor);
 
             foreach(var contact in _doctor.Contacts)
             {
@@ -67,7 +72,8 @@ namespace ENG3.Consultorio.View
                 else
                     _contactDapperRepository.Update(contact);
             }
-           
+            _doctorArealyExistsInDataBase = true;
+            MessageBox.Show("Médico Salvo!");
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
@@ -77,9 +83,36 @@ namespace ENG3.Consultorio.View
         }
         public void OpenDoctor(int crm)
         {
-            Doctor doctor = _doctorDapperRepository.GetById(crm);
-            doctor.Address = _addressDapperRepository.GetById(doctor.AddressId);
-            doctor.Login = _loginDapperRepository.GetById(doctor.LoginId);
+            _doctorArealyExistsInDataBase = true;
+            _doctor = _doctorDapperRepository.GetById(crm);
+            _doctor.Address = _viaCepServices.GetAddress(_addressDapperRepository.GetById(_doctor.AddressId));
+            _doctor.Login = _loginDapperRepository.GetById(_doctor.LoginId);
+            _doctor.Contacts = _contactDapperRepository.GetDoctorContacts(_doctor.Crm).ToList();
+            
+            NameTxt.Text = _doctor.Name;
+            CrmTxt.Text = _doctor.Crm.ToString()  ;
+            SpecialityTxt.Text = _doctor.Specialty;
+            UserTxt.Text = _doctor.Login.User;
+            SenhaTxt.Text = _doctor.Login.Password;
+            CepTxt.Text = _doctor.Address.Cep.ToString();
+            AddressCompTxt.Text = _doctor.Address.Complemento;
+            NumberTxt.Text = _doctor.Address.Number.ToString();
+            AddressTxt.Text = _doctor.Address.AddressValue;
+            foreach(var contact in _doctor.Contacts)
+            {
+                if (contact.Type == PhoneTypeEnum.mobile)
+                    CelTxt.Text = contact.ContactValue;
+                if (contact.Type == PhoneTypeEnum.residential)
+                    TelTxt.Text = contact.ContactValue;
+            }
+            
+        }
+
+        private void CepTxt_Leave(object sender, EventArgs e)
+        {
+            _doctor.Address.Cep = CepTxt.Text.NumbersOnly();
+            _doctor.Address = _viaCepServices.GetAddress(_doctor.Address);
+            AddressTxt.Text = _doctor.Address.AddressValue;
         }
     }
 }

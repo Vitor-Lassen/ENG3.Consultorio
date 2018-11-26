@@ -10,7 +10,7 @@ namespace ENG3.Consultorio.Doman.Entities
     {
         public int Id { get; set; }
         public string User { get; set; }
-        public string Senha { get; set; }
+        public string Password { get; set; }
         public char Access { get; set; }
     }
 }

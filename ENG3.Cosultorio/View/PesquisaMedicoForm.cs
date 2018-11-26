@@ -39,6 +39,7 @@ namespace ENG3.Consultorio.View
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
             _medicoForm.OpenDoctor(Convert.ToInt32(Grid.CurrentRow.Cells[0].Value.ToString()));
+            Close();
         }
     }
 }

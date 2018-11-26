@@ -24,5 +24,20 @@ namespace ENG3.Consultorio.Repository.Dapper
             return _sqlConnection.Query<Contact>(sql, new { crm }, commandType: CommandType.StoredProcedure);
             
         }
+        public Contact InsetSecretaryContacts(int cpf, Contact contact)
+        {
+            contact.Id = (int)Add(contact);
+            var sql = "[Insert-Secretaria_TELEFONE]";
+            _sqlConnection.Execute(sql, new { cpf, TelefoneId = contact.Id }, commandType: System.Data.CommandType.StoredProcedure);
+            return contact;
+        }
+
+        public IEnumerable<Contact> GetSecretaryContacts(int cpf)
+        {
+            var sql = "[Select-Contacts-Secretaria-byCpf]";
+            return _sqlConnection.Query<Contact>(sql, new { cpf }, commandType: CommandType.StoredProcedure);
+
+        }
+
     }
 }

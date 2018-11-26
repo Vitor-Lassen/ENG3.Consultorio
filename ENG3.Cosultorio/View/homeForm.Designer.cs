@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.SecretariaTile = new MetroFramework.Controls.MetroTile();
             this.MedicoTile = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
@@ -38,15 +38,16 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroTile1
+            // SecretariaTile
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(159, 3);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(150, 150);
-            this.metroTile1.TabIndex = 0;
-            this.metroTile1.Text = "Secretária";
-            this.metroTile1.UseSelectable = true;
+            this.SecretariaTile.ActiveControl = null;
+            this.SecretariaTile.Location = new System.Drawing.Point(159, 3);
+            this.SecretariaTile.Name = "SecretariaTile";
+            this.SecretariaTile.Size = new System.Drawing.Size(150, 150);
+            this.SecretariaTile.TabIndex = 0;
+            this.SecretariaTile.Text = "Secretária";
+            this.SecretariaTile.UseSelectable = true;
+            this.SecretariaTile.Click += new System.EventHandler(this.SecretariaTile_Click);
             // 
             // MedicoTile
             // 
@@ -84,7 +85,7 @@
             // 
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.flowLayoutPanel1.Controls.Add(this.metroTile4);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile1);
+            this.flowLayoutPanel1.Controls.Add(this.SecretariaTile);
             this.flowLayoutPanel1.Controls.Add(this.MedicoTile);
             this.flowLayoutPanel1.Controls.Add(this.metroTile3);
             this.flowLayoutPanel1.Controls.Add(this.metroTile5);
@@ -114,13 +115,13 @@
             this.metroTile6.Text = "Agênda";
             this.metroTile6.UseSelectable = true;
             // 
-            // home
+            // homeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 408);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "home";
+            this.Name = "homeForm";
             this.Text = "Clinica";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -129,7 +130,7 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile SecretariaTile;
         private MetroFramework.Controls.MetroTile MedicoTile;
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile4;

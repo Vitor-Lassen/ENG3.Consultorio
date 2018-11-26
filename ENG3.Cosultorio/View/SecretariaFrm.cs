@@ -67,7 +67,7 @@ namespace ENG3.Consultorio.View
                 if (String.IsNullOrEmpty(contact.ContactValue))
                     break;
                 if (contact.Id == 0)
-                    _contactDapperRepository.InsetDoctorContacts(_secretary.Cpf, contact);
+                    _contactDapperRepository.InsetSecretaryContacts(_secretary.Cpf, contact);
                 else
                     _contactDapperRepository.Update(contact);
             }
@@ -80,7 +80,7 @@ namespace ENG3.Consultorio.View
             _secretary = _secretaryDapperRepository.GetById(crm);
             _secretary.Address = _viaCepServices.GetAddress(_addressDapperRepository.GetById(_secretary.AddressId));
             _secretary.Login = _loginDapperRepository.GetById(_secretary.LoginId);
-            _secretary.Contacts = _contactDapperRepository.GetDoctorContacts(_secretary.Cpf).ToList();
+            _secretary.Contacts = _contactDapperRepository.GetSecretaryContacts(_secretary.Cpf).ToList();
 
             NameTxt.Text = _secretary.Name;
             CpfTxt.Text = _secretary.Cpf.ToString();
@@ -105,6 +105,12 @@ namespace ENG3.Consultorio.View
             _secretary.Address.Cep = CepTxt.Text.NumbersOnly();
             _secretary.Address = _viaCepServices.GetAddress(_secretary.Address);
             AddressTxt.Text = _secretary.Address.AddressValue;
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            PesquisaSecretariaForm pesquisaSecretariaForm = new PesquisaSecretariaForm(this);
+            pesquisaSecretariaForm.ShowDialog();
         }
     }
 }

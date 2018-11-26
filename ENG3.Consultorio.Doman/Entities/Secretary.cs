@@ -16,5 +16,11 @@ namespace ENG3.Consultorio.Doman.Entities
         public Address Address { get; set; }
         public int LoginId { get; set; }
         public Login Login { get; set; }
+        public Secretary()
+        {
+            Address = new Address();
+            Contacts = new List<Contact>();
+            Login = new Login();
+        }
     }
 }

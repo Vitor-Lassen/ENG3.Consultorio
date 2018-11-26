@@ -33,5 +33,11 @@ namespace ENG3.Consultorio.View
             MedicoForm medico = new MedicoForm();
             medico.ShowDialog();
         }
+
+        private void SecretariaTile_Click(object sender, EventArgs e)
+        {
+            SecretariaFrm secretariaFrm = new SecretariaFrm();
+            secretariaFrm.ShowDialog();
+        }
     }
 }

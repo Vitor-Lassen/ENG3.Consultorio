@@ -15,7 +15,7 @@ namespace ENG3.Consultorio.Persistence.Mapping
             ToTable("SECRETARIA");
 
             Map(p => p.Cpf)
-                     .ToColumn("PK_SECRETARIA")
+                     .ToColumn("PK_CPFSECRETARIA")
                      .IsKey();
 
             Map(p => p.Name)

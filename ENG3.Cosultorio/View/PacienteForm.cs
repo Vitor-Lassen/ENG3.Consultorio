@@ -24,10 +24,12 @@ namespace ENG3.Consultorio.View
         AddressDapperRepository _addressDapperRepository = new AddressDapperRepository();
         ContactDapperRepository _contactDapperRepository = new ContactDapperRepository();
         PatientDapperRepository _patientDapperRepository = new PatientDapperRepository();
+        ConvenioDapperRepository _convenioDapperRepository = new ConvenioDapperRepository();
         ViaCepServices _viaCepServices = new ViaCepServices();
         public PacienteForm()
         {
             InitializeComponent();
+            LoadConvenioCbo();
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
@@ -40,7 +42,8 @@ namespace ENG3.Consultorio.View
             _patient.Address.Number = NumberTxt.Text.NumbersOnly();
             _patient.Contacts.Add(new Contact() { ContactValue = TelTxt.Text.NumbersOnlyString(), Type = PhoneTypeEnum.residential });
             _patient.Contacts.Add(new Contact() { ContactValue = CelTxt.Text.NumbersOnlyString(), Type = PhoneTypeEnum.mobile });
-
+            _patient.ConvenioId = Convert.ToInt32(ConvenioCbo.SelectedValue.ToString());
+            _patient.Convenio = _convenioDapperRepository.GetById(_patient.ConvenioId);
 
             if (_patient.Address.Id == 0)
                 _patient.Address.Id = (int)_addressDapperRepository.Add(_patient.Address);
@@ -88,11 +91,25 @@ namespace ENG3.Consultorio.View
 
         }
 
+        public void LoadConvenioCbo()
+        {
+            List<Convenio> convenios=_convenioDapperRepository.GetAll().ToList();
+            ConvenioCbo.DataSource = convenios;
+            ConvenioCbo.DisplayMember = "Name";
+            ConvenioCbo.ValueMember = "Id";
+        }
+
         private void CepTxt_Leave(object sender, EventArgs e)
         {
             _patient.Address.Cep = CepTxt.Text.NumbersOnly();
             _patient.Address = _viaCepServices.GetAddress(_patient.Address);
             AddressTxt.Text = _patient.Address.AddressValue;
+        }
+
+        private void NewConvBtn_Click(object sender, EventArgs e)
+        {
+            ConvenioForm convenioForm = new ConvenioForm(this);
+            convenioForm.ShowDialog();
         }
     }
 }

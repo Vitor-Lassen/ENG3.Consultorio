@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.NewConvBtn = new MetroFramework.Controls.MetroButton();
+            this.ConvenioCbo = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.SearchBtn = new MetroFramework.Controls.MetroButton();
             this.SaveBtn = new MetroFramework.Controls.MetroButton();
             this.AddressCompTxt = new MetroFramework.Controls.MetroTextBox();
@@ -47,9 +50,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.CpfTxt = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.ConvenioCbo = new MetroFramework.Controls.MetroComboBox();
-            this.NewConvBtn = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +86,35 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // NewConvBtn
+            // 
+            this.NewConvBtn.Location = new System.Drawing.Point(386, 231);
+            this.NewConvBtn.Name = "NewConvBtn";
+            this.NewConvBtn.Size = new System.Drawing.Size(95, 23);
+            this.NewConvBtn.TabIndex = 28;
+            this.NewConvBtn.Text = "Novo Convênio";
+            this.NewConvBtn.UseSelectable = true;
+            this.NewConvBtn.Click += new System.EventHandler(this.NewConvBtn_Click);
+            // 
+            // ConvenioCbo
+            // 
+            this.ConvenioCbo.FormattingEnabled = true;
+            this.ConvenioCbo.ItemHeight = 23;
+            this.ConvenioCbo.Location = new System.Drawing.Point(115, 228);
+            this.ConvenioCbo.Name = "ConvenioCbo";
+            this.ConvenioCbo.Size = new System.Drawing.Size(265, 29);
+            this.ConvenioCbo.TabIndex = 27;
+            this.ConvenioCbo.UseSelectable = true;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(42, 231);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel3.TabIndex = 26;
+            this.metroLabel3.Text = "Convênio:";
             // 
             // SearchBtn
             // 
@@ -419,34 +448,6 @@
             this.metroLabel1.Size = new System.Drawing.Size(36, 19);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "CPF:";
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(42, 231);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(67, 19);
-            this.metroLabel3.TabIndex = 26;
-            this.metroLabel3.Text = "Convênio:";
-            // 
-            // ConvenioCbo
-            // 
-            this.ConvenioCbo.FormattingEnabled = true;
-            this.ConvenioCbo.ItemHeight = 23;
-            this.ConvenioCbo.Location = new System.Drawing.Point(115, 228);
-            this.ConvenioCbo.Name = "ConvenioCbo";
-            this.ConvenioCbo.Size = new System.Drawing.Size(265, 29);
-            this.ConvenioCbo.TabIndex = 27;
-            this.ConvenioCbo.UseSelectable = true;
-            // 
-            // NewConvBtn
-            // 
-            this.NewConvBtn.Location = new System.Drawing.Point(386, 231);
-            this.NewConvBtn.Name = "NewConvBtn";
-            this.NewConvBtn.Size = new System.Drawing.Size(95, 23);
-            this.NewConvBtn.TabIndex = 28;
-            this.NewConvBtn.Text = "Novo Convênio";
-            this.NewConvBtn.UseSelectable = true;
             // 
             // PacienteForm
             // 

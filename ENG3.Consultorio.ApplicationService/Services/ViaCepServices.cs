@@ -41,24 +41,29 @@ namespace ENG3.Consultorio.ApplicationService.Services
             ViaCepDTO viaCepDTO = new ViaCepDTO();
             using (var httpClient = new HttpClient { BaseAddress = _baseAddress })
             {
-
-                var url = _baseAddress + cep + "/json";
-                //  Logger.Log(url);
-                var resp = httpClient.GetAsync(url).Result;
-
-
-                if (resp.IsSuccessStatusCode)
+                try
                 {
-                   
-                    string responseJson = resp.Content.ReadAsStringAsync().Result;
+                    var url = _baseAddress + cep + "/json";
+                    //  Logger.Log(url);
+                    var resp = httpClient.GetAsync(url).Result;
 
-                    viaCepDTO = JsonConvert.DeserializeObject<ViaCepDTO>(responseJson);
+
+                    if (resp.IsSuccessStatusCode)
+                    {
+
+                        string responseJson = resp.Content.ReadAsStringAsync().Result;
+
+                        viaCepDTO = JsonConvert.DeserializeObject<ViaCepDTO>(responseJson);
+                    }
+                    else
+                    {
+                        viaCepDTO.Erro = true;
+                    }
                 }
-                else
+                catch
                 {
-                    viaCepDTO.Erro = true;
+                    
                 }
-
             }
             return viaCepDTO;
         }

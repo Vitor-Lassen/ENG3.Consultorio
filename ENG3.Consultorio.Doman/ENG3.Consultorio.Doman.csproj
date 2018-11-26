@@ -43,6 +43,7 @@
     <Compile Include="Entities\Consulta.cs" />
     <Compile Include="Entities\Convenio.cs" />
     <Compile Include="Entities\Exame.cs" />
+    <Compile Include="Enums\PhoneTypeEnum.cs" />
     <Compile Include="ValueObjects\Address.cs" />
     <Compile Include="ValueObjects\Contact.cs" />
     <Compile Include="Entities\Login.cs" />
@@ -50,6 +51,9 @@
     <Compile Include="Entities\Patient.cs" />
     <Compile Include="Entities\Secretary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

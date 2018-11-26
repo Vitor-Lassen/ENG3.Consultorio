@@ -1,6 +1,6 @@
 ﻿namespace ENG3.Consultorio.View
 {
-    partial class home
+    partial class homeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.MedicoTile = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -48,15 +48,16 @@
             this.metroTile1.Text = "Secretária";
             this.metroTile1.UseSelectable = true;
             // 
-            // metroTile2
+            // MedicoTile
             // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(315, 3);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(150, 150);
-            this.metroTile2.TabIndex = 1;
-            this.metroTile2.Text = "Medico";
-            this.metroTile2.UseSelectable = true;
+            this.MedicoTile.ActiveControl = null;
+            this.MedicoTile.Location = new System.Drawing.Point(315, 3);
+            this.MedicoTile.Name = "MedicoTile";
+            this.MedicoTile.Size = new System.Drawing.Size(150, 150);
+            this.MedicoTile.TabIndex = 1;
+            this.MedicoTile.Text = "Medico";
+            this.MedicoTile.UseSelectable = true;
+            this.MedicoTile.Click += new System.EventHandler(this.MedicoTile_Click);
             // 
             // metroTile3
             // 
@@ -84,7 +85,7 @@
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.flowLayoutPanel1.Controls.Add(this.metroTile4);
             this.flowLayoutPanel1.Controls.Add(this.metroTile1);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile2);
+            this.flowLayoutPanel1.Controls.Add(this.MedicoTile);
             this.flowLayoutPanel1.Controls.Add(this.metroTile3);
             this.flowLayoutPanel1.Controls.Add(this.metroTile5);
             this.flowLayoutPanel1.Controls.Add(this.metroTile6);
@@ -129,7 +130,7 @@
         #endregion
 
         private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroTile metroTile2;
+        private MetroFramework.Controls.MetroTile MedicoTile;
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

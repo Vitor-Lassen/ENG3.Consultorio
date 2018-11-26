@@ -12,11 +12,12 @@ using System.Windows.Forms;
 
 namespace ENG3.Consultorio.View
 {
-    public partial class home : MetroFramework.Forms.MetroForm
+    public partial class homeForm : MetroFramework.Forms.MetroForm
     {
-        public home()
+        public homeForm()
         {
             InitializeComponent();
+            ENG3.Consultorio.Persistence.Configurations.RegisterMappings.Register();
         }
 
         private void metroTile4_Click(object sender, EventArgs e)
@@ -25,6 +26,12 @@ namespace ENG3.Consultorio.View
             Login login = new Login() { User = "teste", Senha = "ola", Access = 's' };
             LoginDapperRepository dapperRepository = new LoginDapperRepository();
             dapperRepository.Add(login);
+        }
+
+        private void MedicoTile_Click(object sender, EventArgs e)
+        {
+            MedicoForm medico = new MedicoForm();
+            medico.ShowDialog();
         }
     }
 }

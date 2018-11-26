@@ -28,6 +28,8 @@ namespace ENG3.Consultorio.Persistence.Mapping
 
             Map(p => p.AddressId)
                      .ToColumn("FK_ENDERECO_ID");
+
+          
         }
     }
 }

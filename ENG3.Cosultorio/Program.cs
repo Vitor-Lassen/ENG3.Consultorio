@@ -17,7 +17,7 @@ namespace ENG3.Consultorio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new home());
+            Application.Run(new homeForm());
         }
     }
 }

@@ -16,6 +16,12 @@ namespace ENG3.Consultorio.Doman.Entities
         public int LoginId { get; set; }
         public Address Address { get; set; }
         public int AddressId { get; set; }
-
+        public List<Contact> Contacts { get; set; }
+        public Doctor()
+        {
+            Login = new Login();
+            Address = new Address();
+            Contacts = new List<Contact>();
+        }
     }
 }

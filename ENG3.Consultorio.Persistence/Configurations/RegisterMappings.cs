@@ -16,6 +16,9 @@ namespace ENG3.Consultorio.Persistence.Configurations
             FluentMapper.Initialize(config =>
             {
                 config.AddMap(new LoginDapperMap());
+                config.AddMap(new AddressDapperMap());
+                config.AddMap(new ContactDapperMap());
+                config.AddMap(new DoctorDapperMap());
                 config.ForDommel();
             });
         }

@@ -57,6 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configurations\RegisterMappings.cs" />
+    <Compile Include="Mapping\AddressDapperMap.cs" />
+    <Compile Include="Mapping\ContactDapperMap.cs" />
     <Compile Include="Mapping\DoctorDapperMap.cs" />
     <Compile Include="Mapping\LoginDapperMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

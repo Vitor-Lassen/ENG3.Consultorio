@@ -61,6 +61,7 @@
     <Compile Include="Mapping\ContactDapperMap.cs" />
     <Compile Include="Mapping\DoctorDapperMap.cs" />
     <Compile Include="Mapping\LoginDapperMap.cs" />
+    <Compile Include="Mapping\SecretaryDapperMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

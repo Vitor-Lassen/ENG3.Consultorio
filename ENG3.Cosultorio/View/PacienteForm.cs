@@ -74,7 +74,8 @@ namespace ENG3.Consultorio.View
             _patient = _patientDapperRepository.GetById(crm);
             _patient.Address = _viaCepServices.GetAddress(_addressDapperRepository.GetById(_patient.AddressId));
             _patient.Contacts = _contactDapperRepository.GetPatientContacts(_patient.Cpf).ToList();
-
+            _patient.Convenio = _convenioDapperRepository.GetById(_patient.ConvenioId);
+            ConvenioCbo.Text = _patient.Convenio.Name;
             NameTxt.Text = _patient.Name;
             CpfTxt.Text = _patient.Cpf.ToString();
             CepTxt.Text = _patient.Address.Cep.ToString();
@@ -110,6 +111,12 @@ namespace ENG3.Consultorio.View
         {
             ConvenioForm convenioForm = new ConvenioForm(this);
             convenioForm.ShowDialog();
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            PesquisaPacienteForm pesquisaPacienteForm = new PesquisaPacienteForm(this);
+            pesquisaPacienteForm.ShowDialog();
         }
     }
 }

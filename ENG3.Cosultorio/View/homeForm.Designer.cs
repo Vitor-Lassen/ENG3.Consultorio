@@ -33,7 +33,6 @@
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.PacienteTile = new MetroFramework.Controls.MetroTile();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -88,27 +87,16 @@
             this.flowLayoutPanel1.Controls.Add(this.SecretariaTile);
             this.flowLayoutPanel1.Controls.Add(this.MedicoTile);
             this.flowLayoutPanel1.Controls.Add(this.metroTile3);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile5);
             this.flowLayoutPanel1.Controls.Add(this.metroTile6);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 67);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(671, 339);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
-            // metroTile5
-            // 
-            this.metroTile5.ActiveControl = null;
-            this.metroTile5.Location = new System.Drawing.Point(3, 159);
-            this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(150, 150);
-            this.metroTile5.TabIndex = 4;
-            this.metroTile5.Text = "Convênio";
-            this.metroTile5.UseSelectable = true;
-            // 
             // metroTile6
             // 
             this.metroTile6.ActiveControl = null;
-            this.metroTile6.Location = new System.Drawing.Point(159, 159);
+            this.metroTile6.Location = new System.Drawing.Point(3, 159);
             this.metroTile6.Name = "metroTile6";
             this.metroTile6.Size = new System.Drawing.Size(150, 150);
             this.metroTile6.TabIndex = 5;
@@ -135,7 +123,6 @@
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile PacienteTile;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private MetroFramework.Controls.MetroTile metroTile5;
         private MetroFramework.Controls.MetroTile metroTile6;
     }
 }

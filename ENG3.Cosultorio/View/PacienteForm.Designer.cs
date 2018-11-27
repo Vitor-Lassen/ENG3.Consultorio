@@ -124,6 +124,7 @@
             this.SearchBtn.TabIndex = 25;
             this.SearchBtn.Text = "Procurar";
             this.SearchBtn.UseSelectable = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // SaveBtn
             // 

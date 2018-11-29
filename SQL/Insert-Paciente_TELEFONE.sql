@@ -1,5 +1,5 @@
 Create Proc [Insert-Paciente_TELEFONE]
-@cpf int,
+@cpf bigint,
 @TelefoneId int 
 
 as 

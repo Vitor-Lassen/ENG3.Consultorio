@@ -9,7 +9,7 @@ namespace ENG3.Consultorio.Doman.Entities
 {
     public class Secretary
     {
-        public int Cpf { get; set; }
+        public long Cpf { get; set; }
         public string Name { get; set; }
         public List<Contact> Contacts { get; set; }
         public int AddressId { get; set; }

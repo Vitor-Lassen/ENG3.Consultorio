@@ -35,13 +35,13 @@ namespace ENG3.Consultorio.View
         {
 
             _secretary.Name = NameTxt.Text;
-            _secretary.Cpf = CpfTxt.Text.NumbersOnly();
+            _secretary.Cpf = (int)CpfTxt.Text.NumbersOnly();
             _secretary.Login.User = UserTxt.Text;
             _secretary.Login.Password = SenhaTxt.Text;
             _secretary.Login.Access = 's';
-            _secretary.Address.Cep = CepTxt.Text.NumbersOnly();
+            _secretary.Address.Cep = (int)CepTxt.Text.NumbersOnly();
             _secretary.Address.Complemento = AddressCompTxt.Text;
-            _secretary.Address.Number = NumberTxt.Text.NumbersOnly();
+            _secretary.Address.Number = (int)NumberTxt.Text.NumbersOnly();
             _secretary.Contacts.Add(new Contact() { ContactValue = TelTxt.Text.NumbersOnlyString(), Type = PhoneTypeEnum.residential });
             _secretary.Contacts.Add(new Contact() { ContactValue = CelTxt.Text.NumbersOnlyString(), Type = PhoneTypeEnum.mobile });
 
@@ -102,7 +102,7 @@ namespace ENG3.Consultorio.View
 
         private void CepTxt_Leave(object sender, EventArgs e)
         {
-            _secretary.Address.Cep = CepTxt.Text.NumbersOnly();
+            _secretary.Address.Cep = (int)CepTxt.Text.NumbersOnly();
             _secretary.Address = _viaCepServices.GetAddress(_secretary.Address);
             AddressTxt.Text = _secretary.Address.AddressValue;
         }

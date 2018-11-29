@@ -1,5 +1,5 @@
-Create Proc [Select-Contacts-Paciente-byCpf]
-@Cpf int 
+create Proc [Select-Contacts-Paciente-byCpf]
+@Cpf bigint 
 
 as 
 

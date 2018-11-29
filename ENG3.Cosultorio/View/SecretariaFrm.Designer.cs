@@ -508,7 +508,8 @@
             this.ClientSize = new System.Drawing.Size(752, 364);
             this.Controls.Add(this.metroPanel1);
             this.Name = "SecretariaFrm";
-            this.Text = "Secretária";
+            this.RightToLeftLayout = true;
+            this.Text = "Secretário";
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.ResumeLayout(false);

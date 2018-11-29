@@ -35,14 +35,14 @@ namespace ENG3.Consultorio.View
         {
 
             _doctor.Name = NameTxt.Text;
-            _doctor.Crm = CrmTxt.Text.NumbersOnly();
+            _doctor.Crm = (int)CrmTxt.Text.NumbersOnly();
             _doctor.Specialty = SpecialityTxt.Text;
             _doctor.Login.User = UserTxt.Text;
             _doctor.Login.Password = SenhaTxt.Text;
             _doctor.Login.Access = 'd';
-            _doctor.Address.Cep = CepTxt.Text.NumbersOnly();
+            _doctor.Address.Cep = (int)CepTxt.Text.NumbersOnly();
             _doctor.Address.Complemento = AddressCompTxt.Text;
-            _doctor.Address.Number = NumberTxt.Text.NumbersOnly();
+            _doctor.Address.Number = (int)NumberTxt.Text.NumbersOnly();
             _doctor.Contacts.Add(new Contact() { ContactValue = TelTxt.Text.NumbersOnlyString(), Type = PhoneTypeEnum.residential });
             _doctor.Contacts.Add(new Contact() { ContactValue = CelTxt.Text.NumbersOnlyString(), Type = PhoneTypeEnum.mobile });
 
@@ -110,7 +110,7 @@ namespace ENG3.Consultorio.View
 
         private void CepTxt_Leave(object sender, EventArgs e)
         {
-            _doctor.Address.Cep = CepTxt.Text.NumbersOnly();
+            _doctor.Address.Cep = (int)CepTxt.Text.NumbersOnly();
             _doctor.Address = _viaCepServices.GetAddress(_doctor.Address);
             AddressTxt.Text = _doctor.Address.AddressValue;
         }

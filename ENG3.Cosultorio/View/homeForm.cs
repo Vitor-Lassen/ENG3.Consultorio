@@ -37,5 +37,11 @@ namespace ENG3.Consultorio.View
             SecretariaFrm secretariaFrm = new SecretariaFrm();
             secretariaFrm.ShowDialog();
         }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            ConsultaForm consultaForm = new ConsultaForm();
+            consultaForm.ShowDialog();
+        }
     }
 }

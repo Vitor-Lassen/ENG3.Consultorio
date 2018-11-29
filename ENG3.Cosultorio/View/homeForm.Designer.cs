@@ -44,7 +44,7 @@
             this.SecretariaTile.Name = "SecretariaTile";
             this.SecretariaTile.Size = new System.Drawing.Size(150, 150);
             this.SecretariaTile.TabIndex = 0;
-            this.SecretariaTile.Text = "Secretária";
+            this.SecretariaTile.Text = "Secretário";
             this.SecretariaTile.UseSelectable = true;
             this.SecretariaTile.Click += new System.EventHandler(this.SecretariaTile_Click);
             // 
@@ -68,6 +68,7 @@
             this.metroTile3.TabIndex = 2;
             this.metroTile3.Text = "Consulta";
             this.metroTile3.UseSelectable = true;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
             // 
             // PacienteTile
             // 

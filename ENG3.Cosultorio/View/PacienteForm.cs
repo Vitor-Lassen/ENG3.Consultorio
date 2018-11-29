@@ -37,9 +37,9 @@ namespace ENG3.Consultorio.View
 
             _patient.Name = NameTxt.Text;
             _patient.Cpf = CpfTxt.Text.NumbersOnly();
-            _patient.Address.Cep = CepTxt.Text.NumbersOnly();
+            _patient.Address.Cep = (int)CepTxt.Text.NumbersOnly();
             _patient.Address.Complemento = AddressCompTxt.Text;
-            _patient.Address.Number = NumberTxt.Text.NumbersOnly();
+            _patient.Address.Number = (int)NumberTxt.Text.NumbersOnly();
             _patient.Contacts.Add(new Contact() { ContactValue = TelTxt.Text.NumbersOnlyString(), Type = PhoneTypeEnum.residential });
             _patient.Contacts.Add(new Contact() { ContactValue = CelTxt.Text.NumbersOnlyString(), Type = PhoneTypeEnum.mobile });
             _patient.ConvenioId = Convert.ToInt32(ConvenioCbo.SelectedValue.ToString());
@@ -102,7 +102,7 @@ namespace ENG3.Consultorio.View
 
         private void CepTxt_Leave(object sender, EventArgs e)
         {
-            _patient.Address.Cep = CepTxt.Text.NumbersOnly();
+            _patient.Address.Cep = (int)CepTxt.Text.NumbersOnly();
             _patient.Address = _viaCepServices.GetAddress(_patient.Address);
             AddressTxt.Text = _patient.Address.AddressValue;
         }

@@ -9,8 +9,11 @@ namespace ENG3.Consultorio.Doman.Entities
     public class Consulta
     {
         public int Id { get; set; }
+        public long SecretaryId { get; set; }
         public Secretary Secretary { get; set; }
+        public int DoctorId { get; set; }
         public Doctor Doctor { get; set; }
+        public long PatientId { get; set; }
         public Patient Patient { get; set; }
         public DateTime DateStart { get; set; }
         public DateTime DateEnd { get; set; }

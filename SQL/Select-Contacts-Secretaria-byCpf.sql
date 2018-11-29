@@ -1,5 +1,5 @@
 Create Proc [Select-Contacts-Secretaria-byCpf]
-@Cpf int 
+@Cpf bigint 
 
 as 
 

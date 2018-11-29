@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ENG3.Consultorio.Repository.Dapper
 {
-    public class PatientDapperRepository:DapperRepositoryBase<int,Patient>
+    public class PatientDapperRepository:DapperRepositoryBase<long,Patient>
     {
     }
 }

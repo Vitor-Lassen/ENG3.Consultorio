@@ -24,7 +24,7 @@ namespace ENG3.Consultorio.Repository.Dapper
             return _sqlConnection.Query<Contact>(sql, new { crm }, commandType: CommandType.StoredProcedure);
             
         }
-        public Contact InsetSecretaryContacts(int cpf, Contact contact)
+        public Contact InsetSecretaryContacts(long cpf, Contact contact)
         {
             contact.Id = (int)Add(contact);
             var sql = "[Insert-Secretaria_TELEFONE]";
@@ -32,14 +32,14 @@ namespace ENG3.Consultorio.Repository.Dapper
             return contact;
         }
 
-        public IEnumerable<Contact> GetSecretaryContacts(int cpf)
+        public IEnumerable<Contact> GetSecretaryContacts(long cpf)
         {
             var sql = "[Select-Contacts-Secretaria-byCpf]";
             return _sqlConnection.Query<Contact>(sql, new { cpf }, commandType: CommandType.StoredProcedure);
 
         }
 
-        public Contact InsetPatientContacts(int cpf, Contact contact)
+        public Contact InsetPatientContacts(long cpf, Contact contact)
         {
             contact.Id = (int)Add(contact);
             var sql = "[Insert-Paciente_TELEFONE]";
@@ -47,7 +47,7 @@ namespace ENG3.Consultorio.Repository.Dapper
             return contact;
         }
 
-        public IEnumerable<Contact> GetPatientContacts(int cpf)
+        public IEnumerable<Contact> GetPatientContacts(long cpf)
         {
             var sql = "[Select-Contacts-Paciente-byCpf]";
             return _sqlConnection.Query<Contact>(sql, new { cpf }, commandType: CommandType.StoredProcedure);

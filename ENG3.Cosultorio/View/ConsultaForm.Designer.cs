@@ -44,12 +44,16 @@
             this.TipoConsuTxt = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.DataFimDt = new System.Windows.Forms.DateTimePicker();
+            this.DataIniDt = new System.Windows.Forms.DateTimePicker();
             this.SecretariaCbo = new System.Windows.Forms.ComboBox();
             this.MedicoCbo = new System.Windows.Forms.ComboBox();
             this.SearchBtn = new MetroFramework.Controls.MetroButton();
             this.SaveBtn = new MetroFramework.Controls.MetroButton();
-            this.DataIniDt = new System.Windows.Forms.DateTimePicker();
-            this.DataFimDt = new System.Windows.Forms.DateTimePicker();
+            this.MateriaisList = new MetroFramework.Controls.MetroListView();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.MaterialTxt = new MetroFramework.Controls.MetroTextBox();
+            this.AddMaterial = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -278,6 +282,10 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.AddMaterial);
+            this.metroPanel1.Controls.Add(this.MaterialTxt);
+            this.metroPanel1.Controls.Add(this.metroLabel10);
+            this.metroPanel1.Controls.Add(this.MateriaisList);
             this.metroPanel1.Controls.Add(this.DataFimDt);
             this.metroPanel1.Controls.Add(this.DataIniDt);
             this.metroPanel1.Controls.Add(this.SecretariaCbo);
@@ -304,11 +312,31 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(23, 63);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(646, 259);
+            this.metroPanel1.Size = new System.Drawing.Size(646, 376);
             this.metroPanel1.TabIndex = 20;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // DataFimDt
+            // 
+            this.DataFimDt.CustomFormat = "hh:mm";
+            this.DataFimDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DataFimDt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DataFimDt.Location = new System.Drawing.Point(486, 54);
+            this.DataFimDt.Name = "DataFimDt";
+            this.DataFimDt.Size = new System.Drawing.Size(134, 23);
+            this.DataFimDt.TabIndex = 25;
+            // 
+            // DataIniDt
+            // 
+            this.DataIniDt.CustomFormat = "dd/MM/yy hh:mm | dddd";
+            this.DataIniDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DataIniDt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DataIniDt.Location = new System.Drawing.Point(100, 54);
+            this.DataIniDt.Name = "DataIniDt";
+            this.DataIniDt.Size = new System.Drawing.Size(238, 23);
+            this.DataIniDt.TabIndex = 24;
             // 
             // SecretariaCbo
             // 
@@ -334,7 +362,7 @@
             // 
             // SearchBtn
             // 
-            this.SearchBtn.Location = new System.Drawing.Point(464, 233);
+            this.SearchBtn.Location = new System.Drawing.Point(464, 305);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(75, 23);
             this.SearchBtn.TabIndex = 21;
@@ -343,7 +371,7 @@
             // 
             // SaveBtn
             // 
-            this.SaveBtn.Location = new System.Drawing.Point(545, 233);
+            this.SaveBtn.Location = new System.Drawing.Point(545, 305);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(75, 23);
             this.SaveBtn.TabIndex = 20;
@@ -351,25 +379,65 @@
             this.SaveBtn.UseSelectable = true;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
-            // DataIniDt
+            // MateriaisList
             // 
-            this.DataIniDt.CustomFormat = "dd/MM/yy hh:mm | dddd";
-            this.DataIniDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DataIniDt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DataIniDt.Location = new System.Drawing.Point(100, 54);
-            this.DataIniDt.Name = "DataIniDt";
-            this.DataIniDt.Size = new System.Drawing.Size(238, 23);
-            this.DataIniDt.TabIndex = 24;
+            this.MateriaisList.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.MateriaisList.FullRowSelect = true;
+            this.MateriaisList.Location = new System.Drawing.Point(100, 231);
+            this.MateriaisList.Name = "MateriaisList";
+            this.MateriaisList.OwnerDraw = true;
+            this.MateriaisList.Size = new System.Drawing.Size(340, 113);
+            this.MateriaisList.TabIndex = 26;
+            this.MateriaisList.UseCompatibleStateImageBehavior = false;
+            this.MateriaisList.UseSelectable = true;
             // 
-            // DataFimDt
+            // metroLabel10
             // 
-            this.DataFimDt.CustomFormat = "hh:mm";
-            this.DataFimDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DataFimDt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DataFimDt.Location = new System.Drawing.Point(486, 54);
-            this.DataFimDt.Name = "DataFimDt";
-            this.DataFimDt.Size = new System.Drawing.Size(134, 23);
-            this.DataFimDt.TabIndex = 25;
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(30, 241);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(65, 19);
+            this.metroLabel10.TabIndex = 27;
+            this.metroLabel10.Text = "Materiais:";
+            // 
+            // MaterialTxt
+            // 
+            // 
+            // 
+            // 
+            this.MaterialTxt.CustomButton.Image = null;
+            this.MaterialTxt.CustomButton.Location = new System.Drawing.Point(248, 1);
+            this.MaterialTxt.CustomButton.Name = "";
+            this.MaterialTxt.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.MaterialTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.MaterialTxt.CustomButton.TabIndex = 1;
+            this.MaterialTxt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.MaterialTxt.CustomButton.UseSelectable = true;
+            this.MaterialTxt.CustomButton.Visible = false;
+            this.MaterialTxt.Lines = new string[0];
+            this.MaterialTxt.Location = new System.Drawing.Point(100, 343);
+            this.MaterialTxt.MaxLength = 32767;
+            this.MaterialTxt.Name = "MaterialTxt";
+            this.MaterialTxt.PasswordChar = '\0';
+            this.MaterialTxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.MaterialTxt.SelectedText = "";
+            this.MaterialTxt.SelectionLength = 0;
+            this.MaterialTxt.SelectionStart = 0;
+            this.MaterialTxt.ShortcutsEnabled = true;
+            this.MaterialTxt.Size = new System.Drawing.Size(270, 23);
+            this.MaterialTxt.TabIndex = 28;
+            this.MaterialTxt.UseSelectable = true;
+            this.MaterialTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MaterialTxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // AddMaterial
+            // 
+            this.AddMaterial.Location = new System.Drawing.Point(368, 343);
+            this.AddMaterial.Name = "AddMaterial";
+            this.AddMaterial.Size = new System.Drawing.Size(72, 23);
+            this.AddMaterial.TabIndex = 29;
+            this.AddMaterial.Text = "Add";
+            this.AddMaterial.UseSelectable = true;
             // 
             // ConsultaForm
             // 
@@ -409,5 +477,9 @@
         private System.Windows.Forms.ComboBox MedicoCbo;
         private System.Windows.Forms.DateTimePicker DataFimDt;
         private System.Windows.Forms.DateTimePicker DataIniDt;
+        private MetroFramework.Controls.MetroButton AddMaterial;
+        private MetroFramework.Controls.MetroTextBox MaterialTxt;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroListView MateriaisList;
     }
 }

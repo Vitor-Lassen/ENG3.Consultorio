@@ -19,7 +19,7 @@ namespace ENG3.Consultorio.View
     public partial class SecretariaFrm : MetroFramework.Forms.MetroForm
     {
         Secretary _secretary = new Secretary();
-        bool _doctorArealyExistsInDataBase;
+        bool _secretaryArealyExistsInDataBase;
         LoginDapperRepository _loginDapperRepository = new LoginDapperRepository();
         AddressDapperRepository _addressDapperRepository = new AddressDapperRepository();
         ContactDapperRepository _contactDapperRepository = new ContactDapperRepository();
@@ -35,7 +35,7 @@ namespace ENG3.Consultorio.View
         {
 
             _secretary.Name = NameTxt.Text;
-            _secretary.Cpf = (int)CpfTxt.Text.NumbersOnly();
+            _secretary.Cpf = CpfTxt.Text.NumbersOnly();
             _secretary.Login.User = UserTxt.Text;
             _secretary.Login.Password = SenhaTxt.Text;
             _secretary.Login.Access = 's';
@@ -57,7 +57,7 @@ namespace ENG3.Consultorio.View
                 _addressDapperRepository.Update(_secretary.Address);
             _secretary.AddressId = _secretary.Address.Id;
 
-            if (_doctorArealyExistsInDataBase)
+            if (_secretaryArealyExistsInDataBase)
                 _secretaryDapperRepository.Update(_secretary);
             else
                 _secretaryDapperRepository.Add(_secretary);
@@ -71,12 +71,12 @@ namespace ENG3.Consultorio.View
                 else
                     _contactDapperRepository.Update(contact);
             }
-            _doctorArealyExistsInDataBase = true;
+            _secretaryArealyExistsInDataBase = true;
             MessageBox.Show("Secretário Salvo!");
         }
         public void OpenDoctor(int crm)
         {
-            _doctorArealyExistsInDataBase = true;
+            _secretaryArealyExistsInDataBase = true;
             _secretary = _secretaryDapperRepository.GetById(crm);
             _secretary.Address = _viaCepServices.GetAddress(_addressDapperRepository.GetById(_secretary.AddressId));
             _secretary.Login = _loginDapperRepository.GetById(_secretary.LoginId);

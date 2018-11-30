@@ -20,7 +20,7 @@ namespace ENG3.Consultorio.View
         SecretaryDapperRepository _secretaryDapperRepository = new SecretaryDapperRepository();
         PatientDapperRepository _patientDapperRepository = new PatientDapperRepository();
         ConvenioDapperRepository _convenioDapperRepository = new ConvenioDapperRepository();
-
+        ConsultaDapperRepository _consultaDapperRepository = new ConsultaDapperRepository();
         Patient _patient;
 
         public ConsultaForm()
@@ -66,10 +66,13 @@ namespace ENG3.Consultorio.View
             consulta.SecretaryId = Convert.ToInt64(SecretariaCbo.SelectedValue.ToString());
             consulta.Quitado = QuitadoChk.Checked;
             consulta.Price = Convert.ToDouble(ValorTxt.Text);
-            consulta.Id = Convert.ToInt32(CodTxt.Text);
+            consulta.Id = (int)CodTxt.Text.NumbersOnly();
             consulta.PagamentType = TipoConsuTxt.Text;
             consulta.PatientId = CpfPacTxt.Text.NumbersOnly();
-            
+            if(consulta.Id == 0)
+            {
+                _consultaDapperRepository.Add(consulta);
+            }
             
         }
     }

@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Common\DapperRepositoryBase.cs" />
     <Compile Include="Dapper\AddressDapperRepository.cs" />
+    <Compile Include="Dapper\ConsultaDapperRepository.cs" />
     <Compile Include="Dapper\ContactDapperRepository.cs" />
     <Compile Include="Dapper\ConvenioDapperRepository.cs" />
     <Compile Include="Dapper\DoctorDapperRepository.cs" />

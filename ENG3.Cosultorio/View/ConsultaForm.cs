@@ -67,13 +67,16 @@ namespace ENG3.Consultorio.View
             consulta.Quitado = QuitadoChk.Checked;
             consulta.Price = Convert.ToDouble(ValorTxt.Text);
             consulta.Id = (int)CodTxt.Text.NumbersOnly();
-            consulta.PagamentType = TipoConsuTxt.Text;
+            consulta.PagamentType = PgmtTxt.Text;
             consulta.PatientId = CpfPacTxt.Text.NumbersOnly();
             if(consulta.Id == 0)
             {
-                _consultaDapperRepository.Add(consulta);
+                CodTxt.Text=_consultaDapperRepository.Add(consulta).ToString();
             }
-            
+            else
+            {
+                _consultaDapperRepository.Update(consulta);
+            }
         }
     }
 }

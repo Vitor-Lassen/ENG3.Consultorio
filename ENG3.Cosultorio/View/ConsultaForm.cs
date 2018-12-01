@@ -44,19 +44,6 @@ namespace ENG3.Consultorio.View
             SecretariaCbo.ValueMember = "Cpf";
         }
 
-        private void CpfPacTxt_MouseLeave(object sender, EventArgs e)
-        {
-            long cpf = CpfPacTxt.Text.NumbersOnly();
-
-                _patient = _patientDapperRepository.GetById(cpf);
-                if (_patient != null &&_patient.ConvenioId != 0)
-                {
-                    _patient.Convenio = _convenioDapperRepository.GetById(_patient.ConvenioId);
-                    PgmtTxt.Text = _patient.Convenio.Name;
-                }
-            
-        }
-
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             Consulta consulta = new Consulta();
@@ -87,12 +74,14 @@ namespace ENG3.Consultorio.View
                     material.Id =_materialDapperRepository.InsetConsultaMaterial(consulta.Id, material).Id;
                 }
             }
+            MessageBox.Show("Consulta Salva!");
         }
 
         private void AddMaterial_Click(object sender, EventArgs e)
         {
             _materiais.Add(new Material(MaterialTxt.Text));
             ReloadMateriaisList();
+            MaterialTxt.Clear();
         }
         private void ReloadMateriaisList()
         {
@@ -101,6 +90,27 @@ namespace ENG3.Consultorio.View
             {
                 MateriaisList.Items.Add(material.Name);
             }
+        }
+
+        private void CpfPacTxt_Leave(object sender, EventArgs e)
+        {
+            long cpf = CpfPacTxt.Text.NumbersOnly();
+
+            _patient = _patientDapperRepository.GetById(cpf);
+            if (_patient != null)
+            {
+                ClientNameLbl.Text = _patient.Name;
+                if (_patient.ConvenioId != 0)
+                {
+                    _patient.Convenio = _convenioDapperRepository.GetById(_patient.ConvenioId);
+                    PgmtTxt.Text = _patient.Convenio.Name;
+                }
+            }
+            else
+            {
+                ClientNameLbl.Text = "Paciente Não Encontrado";
+            }
+           
         }
     }
 }

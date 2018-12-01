@@ -51,9 +51,10 @@
             this.DataIniDt = new System.Windows.Forms.DateTimePicker();
             this.SecretariaCbo = new System.Windows.Forms.ComboBox();
             this.MedicoCbo = new System.Windows.Forms.ComboBox();
-            this.SearchBtn = new MetroFramework.Controls.MetroButton();
             this.SaveBtn = new MetroFramework.Controls.MetroButton();
             this.MateriaisList = new System.Windows.Forms.ListBox();
+            this.ClientNameLbl = new MetroFramework.Controls.MetroLabel();
+            this.ExameBtn = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,12 +152,12 @@
             this.CpfPacTxt.ShortcutsEnabled = false;
             this.CpfPacTxt.Size = new System.Drawing.Size(110, 23);
             this.CpfPacTxt.TabIndex = 11;
-            this.CpfPacTxt.MouseLeave += new System.EventHandler(this.CpfPacTxt_MouseLeave);
+            this.CpfPacTxt.Leave += new System.EventHandler(this.CpfPacTxt_Leave);
             // 
             // QuitadoChk
             // 
             this.QuitadoChk.AutoSize = true;
-            this.QuitadoChk.Location = new System.Drawing.Point(507, 166);
+            this.QuitadoChk.Location = new System.Drawing.Point(554, 284);
             this.QuitadoChk.Name = "QuitadoChk";
             this.QuitadoChk.Size = new System.Drawing.Size(66, 15);
             this.QuitadoChk.TabIndex = 12;
@@ -178,7 +179,7 @@
             this.ValorTxt.CustomButton.UseSelectable = true;
             this.ValorTxt.CustomButton.Visible = false;
             this.ValorTxt.Lines = new string[0];
-            this.ValorTxt.Location = new System.Drawing.Point(100, 201);
+            this.ValorTxt.Location = new System.Drawing.Point(510, 241);
             this.ValorTxt.MaxLength = 32767;
             this.ValorTxt.Name = "ValorTxt";
             this.ValorTxt.PasswordChar = '\0';
@@ -196,7 +197,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(216, 205);
+            this.metroLabel7.Location = new System.Drawing.Point(313, 207);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(122, 19);
             this.metroLabel7.TabIndex = 14;
@@ -217,7 +218,7 @@
             this.PgmtTxt.CustomButton.UseSelectable = true;
             this.PgmtTxt.CustomButton.Visible = false;
             this.PgmtTxt.Lines = new string[0];
-            this.PgmtTxt.Location = new System.Drawing.Point(344, 201);
+            this.PgmtTxt.Location = new System.Drawing.Point(441, 203);
             this.PgmtTxt.MaxLength = 32767;
             this.PgmtTxt.Name = "PgmtTxt";
             this.PgmtTxt.PasswordChar = '\0';
@@ -235,7 +236,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(52, 205);
+            this.metroLabel8.Location = new System.Drawing.Point(462, 245);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(42, 19);
             this.metroLabel8.TabIndex = 16;
@@ -247,7 +248,7 @@
             // 
             // 
             this.TipoConsuTxt.CustomButton.Image = null;
-            this.TipoConsuTxt.CustomButton.Location = new System.Drawing.Point(98, 1);
+            this.TipoConsuTxt.CustomButton.Location = new System.Drawing.Point(164, 1);
             this.TipoConsuTxt.CustomButton.Name = "";
             this.TipoConsuTxt.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TipoConsuTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -256,7 +257,7 @@
             this.TipoConsuTxt.CustomButton.UseSelectable = true;
             this.TipoConsuTxt.CustomButton.Visible = false;
             this.TipoConsuTxt.Lines = new string[0];
-            this.TipoConsuTxt.Location = new System.Drawing.Point(344, 162);
+            this.TipoConsuTxt.Location = new System.Drawing.Point(100, 203);
             this.TipoConsuTxt.MaxLength = 32767;
             this.TipoConsuTxt.Name = "TipoConsuTxt";
             this.TipoConsuTxt.PasswordChar = '\0';
@@ -265,7 +266,7 @@
             this.TipoConsuTxt.SelectionLength = 0;
             this.TipoConsuTxt.SelectionStart = 0;
             this.TipoConsuTxt.ShortcutsEnabled = true;
-            this.TipoConsuTxt.Size = new System.Drawing.Size(120, 23);
+            this.TipoConsuTxt.Size = new System.Drawing.Size(186, 23);
             this.TipoConsuTxt.TabIndex = 19;
             this.TipoConsuTxt.UseSelectable = true;
             this.TipoConsuTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -274,7 +275,7 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(246, 166);
+            this.metroLabel9.Location = new System.Drawing.Point(3, 207);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(92, 19);
             this.metroLabel9.TabIndex = 18;
@@ -282,6 +283,8 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.ExameBtn);
+            this.metroPanel1.Controls.Add(this.ClientNameLbl);
             this.metroPanel1.Controls.Add(this.MateriaisList);
             this.metroPanel1.Controls.Add(this.MaterialTxt);
             this.metroPanel1.Controls.Add(this.AddMaterial);
@@ -290,7 +293,6 @@
             this.metroPanel1.Controls.Add(this.DataIniDt);
             this.metroPanel1.Controls.Add(this.SecretariaCbo);
             this.metroPanel1.Controls.Add(this.MedicoCbo);
-            this.metroPanel1.Controls.Add(this.SearchBtn);
             this.metroPanel1.Controls.Add(this.SaveBtn);
             this.metroPanel1.Controls.Add(this.metroLabel9);
             this.metroPanel1.Controls.Add(this.TipoConsuTxt);
@@ -409,18 +411,9 @@
             this.MedicoCbo.Size = new System.Drawing.Size(520, 24);
             this.MedicoCbo.TabIndex = 22;
             // 
-            // SearchBtn
-            // 
-            this.SearchBtn.Location = new System.Drawing.Point(464, 305);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(75, 23);
-            this.SearchBtn.TabIndex = 21;
-            this.SearchBtn.Text = "Procurar";
-            this.SearchBtn.UseSelectable = true;
-            // 
             // SaveBtn
             // 
-            this.SaveBtn.Location = new System.Drawing.Point(545, 305);
+            this.SaveBtn.Location = new System.Drawing.Point(545, 343);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(75, 23);
             this.SaveBtn.TabIndex = 20;
@@ -437,6 +430,23 @@
             this.MateriaisList.Name = "MateriaisList";
             this.MateriaisList.Size = new System.Drawing.Size(340, 100);
             this.MateriaisList.TabIndex = 30;
+            // 
+            // ClientNameLbl
+            // 
+            this.ClientNameLbl.AutoSize = true;
+            this.ClientNameLbl.Location = new System.Drawing.Point(216, 162);
+            this.ClientNameLbl.Name = "ClientNameLbl";
+            this.ClientNameLbl.Size = new System.Drawing.Size(0, 0);
+            this.ClientNameLbl.TabIndex = 31;
+            // 
+            // ExameBtn
+            // 
+            this.ExameBtn.Location = new System.Drawing.Point(464, 343);
+            this.ExameBtn.Name = "ExameBtn";
+            this.ExameBtn.Size = new System.Drawing.Size(75, 23);
+            this.ExameBtn.TabIndex = 21;
+            this.ExameBtn.Text = "Exames";
+            this.ExameBtn.UseSelectable = true;
             // 
             // ConsultaForm
             // 
@@ -470,7 +480,6 @@
         private MetroFramework.Controls.MetroTextBox TipoConsuTxt;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroButton SearchBtn;
         private MetroFramework.Controls.MetroButton SaveBtn;
         private System.Windows.Forms.ComboBox SecretariaCbo;
         private System.Windows.Forms.ComboBox MedicoCbo;
@@ -480,5 +489,7 @@
         private MetroFramework.Controls.MetroTextBox MaterialTxt;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private System.Windows.Forms.ListBox MateriaisList;
+        private MetroFramework.Controls.MetroLabel ClientNameLbl;
+        private MetroFramework.Controls.MetroButton ExameBtn;
     }
 }

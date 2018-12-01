@@ -43,5 +43,11 @@ namespace ENG3.Consultorio.View
             ConsultaForm consultaForm = new ConsultaForm();
             consultaForm.ShowDialog();
         }
+
+        private void AgendaTile_Click(object sender, EventArgs e)
+        {
+            AgendaForm agendaForm = new AgendaForm();
+            agendaForm.ShowDialog();
+        }
     }
 }

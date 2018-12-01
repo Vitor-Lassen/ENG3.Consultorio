@@ -61,6 +61,7 @@
     <Compile Include="Dapper\ConvenioDapperRepository.cs" />
     <Compile Include="Dapper\DoctorDapperRepository.cs" />
     <Compile Include="Dapper\LoginDapperRepository.cs" />
+    <Compile Include="Dapper\MaterialDapperRepository.cs" />
     <Compile Include="Dapper\PatientDapperRepository.cs" />
     <Compile Include="Dapper\SecretaryDapperRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

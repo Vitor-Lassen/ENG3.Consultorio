@@ -44,16 +44,16 @@
             this.TipoConsuTxt = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.MaterialTxt = new MetroFramework.Controls.MetroTextBox();
+            this.AddMaterial = new MetroFramework.Controls.MetroButton();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.DataFimDt = new System.Windows.Forms.DateTimePicker();
             this.DataIniDt = new System.Windows.Forms.DateTimePicker();
             this.SecretariaCbo = new System.Windows.Forms.ComboBox();
             this.MedicoCbo = new System.Windows.Forms.ComboBox();
             this.SearchBtn = new MetroFramework.Controls.MetroButton();
             this.SaveBtn = new MetroFramework.Controls.MetroButton();
-            this.MateriaisList = new MetroFramework.Controls.MetroListView();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.MaterialTxt = new MetroFramework.Controls.MetroTextBox();
-            this.AddMaterial = new MetroFramework.Controls.MetroButton();
+            this.MateriaisList = new System.Windows.Forms.ListBox();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -282,10 +282,10 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.AddMaterial);
-            this.metroPanel1.Controls.Add(this.MaterialTxt);
-            this.metroPanel1.Controls.Add(this.metroLabel10);
             this.metroPanel1.Controls.Add(this.MateriaisList);
+            this.metroPanel1.Controls.Add(this.MaterialTxt);
+            this.metroPanel1.Controls.Add(this.AddMaterial);
+            this.metroPanel1.Controls.Add(this.metroLabel10);
             this.metroPanel1.Controls.Add(this.DataFimDt);
             this.metroPanel1.Controls.Add(this.DataIniDt);
             this.metroPanel1.Controls.Add(this.SecretariaCbo);
@@ -317,6 +317,55 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // MaterialTxt
+            // 
+            // 
+            // 
+            // 
+            this.MaterialTxt.CustomButton.Image = null;
+            this.MaterialTxt.CustomButton.Location = new System.Drawing.Point(248, 1);
+            this.MaterialTxt.CustomButton.Name = "";
+            this.MaterialTxt.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.MaterialTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.MaterialTxt.CustomButton.TabIndex = 1;
+            this.MaterialTxt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.MaterialTxt.CustomButton.UseSelectable = true;
+            this.MaterialTxt.CustomButton.Visible = false;
+            this.MaterialTxt.Lines = new string[0];
+            this.MaterialTxt.Location = new System.Drawing.Point(100, 343);
+            this.MaterialTxt.MaxLength = 32767;
+            this.MaterialTxt.Name = "MaterialTxt";
+            this.MaterialTxt.PasswordChar = '\0';
+            this.MaterialTxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.MaterialTxt.SelectedText = "";
+            this.MaterialTxt.SelectionLength = 0;
+            this.MaterialTxt.SelectionStart = 0;
+            this.MaterialTxt.ShortcutsEnabled = true;
+            this.MaterialTxt.Size = new System.Drawing.Size(270, 23);
+            this.MaterialTxt.TabIndex = 28;
+            this.MaterialTxt.UseSelectable = true;
+            this.MaterialTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MaterialTxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // AddMaterial
+            // 
+            this.AddMaterial.Location = new System.Drawing.Point(368, 343);
+            this.AddMaterial.Name = "AddMaterial";
+            this.AddMaterial.Size = new System.Drawing.Size(72, 23);
+            this.AddMaterial.TabIndex = 29;
+            this.AddMaterial.Text = "Adicionar";
+            this.AddMaterial.UseSelectable = true;
+            this.AddMaterial.Click += new System.EventHandler(this.AddMaterial_Click);
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(30, 241);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(65, 19);
+            this.metroLabel10.TabIndex = 27;
+            this.metroLabel10.Text = "Materiais:";
             // 
             // DataFimDt
             // 
@@ -381,69 +430,19 @@
             // 
             // MateriaisList
             // 
-            this.MateriaisList.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.MateriaisList.FullRowSelect = true;
-            this.MateriaisList.Location = new System.Drawing.Point(100, 231);
+            this.MateriaisList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.MateriaisList.FormattingEnabled = true;
+            this.MateriaisList.ItemHeight = 16;
+            this.MateriaisList.Location = new System.Drawing.Point(100, 241);
             this.MateriaisList.Name = "MateriaisList";
-            this.MateriaisList.OwnerDraw = true;
-            this.MateriaisList.Size = new System.Drawing.Size(340, 113);
-            this.MateriaisList.TabIndex = 26;
-            this.MateriaisList.UseCompatibleStateImageBehavior = false;
-            this.MateriaisList.UseSelectable = true;
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(30, 241);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(65, 19);
-            this.metroLabel10.TabIndex = 27;
-            this.metroLabel10.Text = "Materiais:";
-            // 
-            // MaterialTxt
-            // 
-            // 
-            // 
-            // 
-            this.MaterialTxt.CustomButton.Image = null;
-            this.MaterialTxt.CustomButton.Location = new System.Drawing.Point(248, 1);
-            this.MaterialTxt.CustomButton.Name = "";
-            this.MaterialTxt.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.MaterialTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.MaterialTxt.CustomButton.TabIndex = 1;
-            this.MaterialTxt.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.MaterialTxt.CustomButton.UseSelectable = true;
-            this.MaterialTxt.CustomButton.Visible = false;
-            this.MaterialTxt.Lines = new string[0];
-            this.MaterialTxt.Location = new System.Drawing.Point(100, 343);
-            this.MaterialTxt.MaxLength = 32767;
-            this.MaterialTxt.Name = "MaterialTxt";
-            this.MaterialTxt.PasswordChar = '\0';
-            this.MaterialTxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.MaterialTxt.SelectedText = "";
-            this.MaterialTxt.SelectionLength = 0;
-            this.MaterialTxt.SelectionStart = 0;
-            this.MaterialTxt.ShortcutsEnabled = true;
-            this.MaterialTxt.Size = new System.Drawing.Size(270, 23);
-            this.MaterialTxt.TabIndex = 28;
-            this.MaterialTxt.UseSelectable = true;
-            this.MaterialTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.MaterialTxt.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // AddMaterial
-            // 
-            this.AddMaterial.Location = new System.Drawing.Point(368, 343);
-            this.AddMaterial.Name = "AddMaterial";
-            this.AddMaterial.Size = new System.Drawing.Size(72, 23);
-            this.AddMaterial.TabIndex = 29;
-            this.AddMaterial.Text = "Add";
-            this.AddMaterial.UseSelectable = true;
+            this.MateriaisList.Size = new System.Drawing.Size(340, 100);
+            this.MateriaisList.TabIndex = 30;
             // 
             // ConsultaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(691, 450);
             this.Controls.Add(this.metroPanel1);
             this.Name = "ConsultaForm";
             this.Text = "Consulta";
@@ -480,6 +479,6 @@
         private MetroFramework.Controls.MetroButton AddMaterial;
         private MetroFramework.Controls.MetroTextBox MaterialTxt;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroListView MateriaisList;
+        private System.Windows.Forms.ListBox MateriaisList;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using ENG3.Consultorio.ApplicationService.Extensions;
 using ENG3.Consultorio.Doman.Entities;
+using ENG3.Consultorio.Doman.ValueObjects;
 using ENG3.Consultorio.Repository.Dapper;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace ENG3.Consultorio.View
 {
     public partial class ConsultaForm : MetroFramework.Forms.MetroForm
@@ -21,7 +21,9 @@ namespace ENG3.Consultorio.View
         PatientDapperRepository _patientDapperRepository = new PatientDapperRepository();
         ConvenioDapperRepository _convenioDapperRepository = new ConvenioDapperRepository();
         ConsultaDapperRepository _consultaDapperRepository = new ConsultaDapperRepository();
+        MaterialDapperRepository _materialDapperRepository = new MaterialDapperRepository();
         Patient _patient;
+        List<Material> _materiais = new List<Material>();
 
         public ConsultaForm()
         {
@@ -68,14 +70,36 @@ namespace ENG3.Consultorio.View
             consulta.Price = Convert.ToDouble(ValorTxt.Text);
             consulta.Id = (int)CodTxt.Text.NumbersOnly();
             consulta.PagamentType = PgmtTxt.Text;
-            consulta.PatientId = CpfPacTxt.Text.NumbersOnly();
+            consulta.PatientId = CpfPacTxt.Text.NumbersOnly(); 
             if(consulta.Id == 0)
             {
-                CodTxt.Text=_consultaDapperRepository.Add(consulta).ToString();
+                consulta.Id=(int)_consultaDapperRepository.Add(consulta);
+                CodTxt.Text = consulta.Id.ToString();
             }
             else
             {
                 _consultaDapperRepository.Update(consulta);
+            }
+            foreach (var material in _materiais)
+            {
+                if (material.Id == 0)
+                {
+                    material.Id =_materialDapperRepository.InsetConsultaMaterial(consulta.Id, material).Id;
+                }
+            }
+        }
+
+        private void AddMaterial_Click(object sender, EventArgs e)
+        {
+            _materiais.Add(new Material(MaterialTxt.Text));
+            ReloadMateriaisList();
+        }
+        private void ReloadMateriaisList()
+        {
+            MateriaisList.Items.Clear();
+            foreach(var material in _materiais)
+            {
+                MateriaisList.Items.Add(material.Name);
             }
         }
     }

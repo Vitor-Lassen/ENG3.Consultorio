@@ -68,6 +68,14 @@
     <Compile Include="View\ConvenioForm.Designer.cs">
       <DependentUpon>ConvenioForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="..\..\..\Users\asus\Desktop\ExameForm.cs">
+      <SubType>Form</SubType>
+      <Link>View\ExameForm.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Users\asus\Desktop\ExameForm.Designer.cs">
+      <DependentUpon>ExameForm.cs</DependentUpon>
+      <Link>View\ExameForm.Designer.cs</Link>
+    </Compile>
     <Compile Include="View\homeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +133,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ConvenioForm.resx">
       <DependentUpon>ConvenioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Users\asus\Desktop\ExameForm.resx">
+      <DependentUpon>ExameForm.cs</DependentUpon>
+      <Link>View\ExameForm.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="View\homeForm.resx">
       <DependentUpon>homeForm.cs</DependentUpon>

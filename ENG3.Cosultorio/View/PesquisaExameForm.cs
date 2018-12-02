@@ -41,6 +41,7 @@ namespace ENG3.Consultorio.View
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
             ExameForm exameForm = new ExameForm(this,_consultaId);
+            exameForm.CarregaExame(Convert.ToInt32(Grid.CurrentRow.Cells[0].Value));
             exameForm.ShowDialog();
         }
     }

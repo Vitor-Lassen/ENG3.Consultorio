@@ -70,6 +70,8 @@ namespace ENG3.Consultorio.View
         }
         public void OpenDoctor(int crm)
         {
+            CelTxt.Clear();
+            TelTxt.Clear();
             _doctorArealyExistsInDataBase = true;
             _patient = _patientDapperRepository.GetById(crm);
             _patient.Address = _viaCepServices.GetAddress(_addressDapperRepository.GetById(_patient.AddressId));

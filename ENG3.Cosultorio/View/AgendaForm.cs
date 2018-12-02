@@ -52,9 +52,10 @@ namespace ENG3.Consultorio.View
                     Doutor = consulta.Doctor.Name,
                     PacienteCPF = consulta.PatientId.ToString()
                 });
-                Grid.DataSource = searchConsultas;
+                
 
             }
+            Grid.DataSource = searchConsultas;
 
         }
 
@@ -77,6 +78,13 @@ namespace ENG3.Consultorio.View
         private void DesfazerBtn_Click(object sender, EventArgs e)
         {
             MedicoCbo.SelectedIndex = -1;
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            int consultaId = Convert.ToInt32(Grid.CurrentRow.Cells[0].Value);
+            ConsultaForm consultaForm = new ConsultaForm(consultaId);
+            consultaForm.ShowDialog();
         }
     }
 }

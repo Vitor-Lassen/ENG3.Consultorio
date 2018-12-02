@@ -10,9 +10,6 @@ namespace ENG3.Consultorio.Doman.ValueObjects
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public Material(string name)
-        {
-            Name = name;
-        }
+     
     }
 }

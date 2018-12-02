@@ -20,7 +20,7 @@ namespace ENG3.Consultorio.Persistence.Mapping
                     .IsKey();
 
             Map(p => p.Name)
-                    .ToColumn("Nome");
+                    .ToColumn("NOME");
         }
     }
 }

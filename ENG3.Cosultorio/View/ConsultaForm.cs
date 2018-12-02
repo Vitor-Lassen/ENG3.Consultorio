@@ -27,6 +27,15 @@ namespace ENG3.Consultorio.View
 
         public ConsultaForm()
         {
+            Initialize();
+        }
+        public ConsultaForm(int consultaId) 
+        {
+            Initialize();
+            OpenConsulta(consultaId);
+        }
+        private void Initialize()
+        {
             InitializeComponent();
             carregaCbos();
             SecretariaCbo.SelectedIndex = -1;
@@ -76,10 +85,28 @@ namespace ENG3.Consultorio.View
             }
             MessageBox.Show("Consulta Salva!");
         }
+        private void OpenConsulta(int consultaId)
+        {
+            Consulta consulta = _consultaDapperRepository.GetById(consultaId);
+            CodTxt.Text = consulta.Id.ToString();
+            DataFimDt.Value = consulta.DateStart;
+            DataIniDt.Value = consulta.DateEnd;
+            MedicoCbo.SelectedValue = consulta.DoctorId;
+            SecretariaCbo.SelectedValue = consulta.SecretaryId;
+            CpfPacTxt.Text = consulta.PatientId.ToString();
+            TipoConsuTxt.Text = consulta.ConsultaType;
+            PgmtTxt.Text = consulta.PagamentType;
+            ValorTxt.Text = consulta.Price.ToString();
+            QuitadoChk.Checked = consulta.Quitado;
+
+            _materiais = _materialDapperRepository.GetMateriaisByConsultaId(consulta.Id).ToList();
+            ReloadMateriaisList();
+
+        }
 
         private void AddMaterial_Click(object sender, EventArgs e)
         {
-            _materiais.Add(new Material(MaterialTxt.Text));
+            _materiais.Add(new Material() { Name = MaterialTxt.Text });
             ReloadMateriaisList();
             MaterialTxt.Clear();
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaForm));
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.CodTxt = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -60,6 +61,8 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
+            this.metroLabel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Selectable;
             this.metroLabel1.Location = new System.Drawing.Point(38, 22);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(56, 19);
@@ -127,6 +130,8 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroLabel5.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.metroLabel5.Location = new System.Drawing.Point(27, 128);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(68, 19);
@@ -282,6 +287,8 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.metroPanel1.Controls.Add(this.AddMaterial);
             this.metroPanel1.Controls.Add(this.MaterialTxt);
             this.metroPanel1.Controls.Add(this.metroLabel10);
@@ -310,9 +317,9 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(23, 63);
+            this.metroPanel1.Location = new System.Drawing.Point(23, 53);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(646, 376);
+            this.metroPanel1.Size = new System.Drawing.Size(754, 387);
             this.metroPanel1.TabIndex = 20;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -324,7 +331,7 @@
             this.AddMaterial.Name = "AddMaterial";
             this.AddMaterial.Size = new System.Drawing.Size(72, 23);
             this.AddMaterial.TabIndex = 29;
-            this.AddMaterial.Text = "Add";
+            this.AddMaterial.Text = "Adicionar";
             this.AddMaterial.UseSelectable = true;
             // 
             // MaterialTxt
@@ -387,6 +394,7 @@
             this.DataFimDt.Name = "DataFimDt";
             this.DataFimDt.Size = new System.Drawing.Size(134, 23);
             this.DataFimDt.TabIndex = 25;
+            this.DataFimDt.Value = new System.DateTime(2018, 12, 1, 21, 52, 43, 0);
             // 
             // DataIniDt
             // 
@@ -402,6 +410,7 @@
             // 
             this.SecretariaCbo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.SecretariaCbo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.SecretariaCbo.BackColor = System.Drawing.SystemColors.HotTrack;
             this.SecretariaCbo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.SecretariaCbo.FormattingEnabled = true;
             this.SecretariaCbo.Location = new System.Drawing.Point(100, 123);
@@ -443,10 +452,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(801, 450);
             this.Controls.Add(this.metroPanel1);
             this.Name = "ConsultaForm";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.Text = "Consulta";
+            this.Load += new System.EventHandler(this.ConsultaForm_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.ResumeLayout(false);

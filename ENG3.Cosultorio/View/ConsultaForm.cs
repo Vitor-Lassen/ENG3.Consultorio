@@ -78,5 +78,10 @@ namespace ENG3.Consultorio.View
                 _consultaDapperRepository.Update(consulta);
             }
         }
+
+        private void ConsultaForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -220,11 +220,11 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(31, 200);
+            this.metroLabel9.Location = new System.Drawing.Point(12, 200);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(78, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(97, 19);
             this.metroLabel9.TabIndex = 18;
-            this.metroLabel9.Text = "Complento:";
+            this.metroLabel9.Text = "Complemento:";
             // 
             // NumberTxt
             // 

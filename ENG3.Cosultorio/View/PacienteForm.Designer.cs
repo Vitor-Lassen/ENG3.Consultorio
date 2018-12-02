@@ -79,7 +79,7 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(23, 54);
+            this.metroPanel1.Location = new System.Drawing.Point(23, 47);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(664, 263);
             this.metroPanel1.TabIndex = 2;
@@ -169,11 +169,11 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(31, 200);
+            this.metroLabel9.Location = new System.Drawing.Point(12, 200);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(78, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(97, 19);
             this.metroLabel9.TabIndex = 18;
-            this.metroLabel9.Text = "Complento:";
+            this.metroLabel9.Text = "Complemento:";
             // 
             // NumberTxt
             // 

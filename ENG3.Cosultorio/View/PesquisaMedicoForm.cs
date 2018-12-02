@@ -41,5 +41,15 @@ namespace ENG3.Consultorio.View
             _medicoForm.OpenDoctor(Convert.ToInt32(Grid.CurrentRow.Cells[0].Value.ToString()));
             Close();
         }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

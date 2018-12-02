@@ -75,6 +75,12 @@
     <Compile Include="View\ConvenioForm.Designer.cs">
       <DependentUpon>ConvenioForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ExameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ExameForm.Designer.cs">
+      <DependentUpon>ExameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\homeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,12 @@
     </Compile>
     <Compile Include="View\PesquisaPacienteForm.Designer.cs">
       <DependentUpon>PesquisaPacienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PesquisaExameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PesquisaExameForm.Designer.cs">
+      <DependentUpon>PesquisaExameForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\PesquisaSecretariaForm.cs">
       <SubType>Form</SubType>
@@ -144,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PacienteForm.resx">
       <DependentUpon>PacienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PesquisaExameForm.resx">
+      <DependentUpon>PesquisaExameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PesquisaMedicoForm.resx">
       <DependentUpon>PesquisaMedicoForm.cs</DependentUpon>

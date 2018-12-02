@@ -9,6 +9,7 @@ namespace ENG3.Consultorio.Doman.Entities
     public class Exame
     {
         public int Id { get; set; }
+        public int ConsultaId { get; set; }
         public Consulta Consulta { get; set; }
         public string Name { get; set; }
         public DateTime Date { get; set; }

@@ -24,6 +24,7 @@ namespace ENG3.Consultorio.Persistence.Configurations
                 config.AddMap(new ConvenioDapperMap());
                 config.AddMap(new ConsultaDapperMap());
                 config.AddMap(new MaterialDapperMap());
+                config.AddMap(new ExameDapperRepository());
                 config.ForDommel();
             });
         }

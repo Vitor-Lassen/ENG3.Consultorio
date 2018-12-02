@@ -44,6 +44,9 @@
             this.TipoConsuTxt = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.ExameBtn = new MetroFramework.Controls.MetroButton();
+            this.ClientNameLbl = new MetroFramework.Controls.MetroLabel();
+            this.MateriaisList = new System.Windows.Forms.ListBox();
             this.MaterialTxt = new MetroFramework.Controls.MetroTextBox();
             this.AddMaterial = new MetroFramework.Controls.MetroButton();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -52,9 +55,6 @@
             this.SecretariaCbo = new System.Windows.Forms.ComboBox();
             this.MedicoCbo = new System.Windows.Forms.ComboBox();
             this.SaveBtn = new MetroFramework.Controls.MetroButton();
-            this.MateriaisList = new System.Windows.Forms.ListBox();
-            this.ClientNameLbl = new MetroFramework.Controls.MetroLabel();
-            this.ExameBtn = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -320,6 +320,34 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
+            // ExameBtn
+            // 
+            this.ExameBtn.Location = new System.Drawing.Point(464, 343);
+            this.ExameBtn.Name = "ExameBtn";
+            this.ExameBtn.Size = new System.Drawing.Size(75, 23);
+            this.ExameBtn.TabIndex = 21;
+            this.ExameBtn.Text = "Exames";
+            this.ExameBtn.UseSelectable = true;
+            this.ExameBtn.Click += new System.EventHandler(this.ExameBtn_Click);
+            // 
+            // ClientNameLbl
+            // 
+            this.ClientNameLbl.AutoSize = true;
+            this.ClientNameLbl.Location = new System.Drawing.Point(216, 162);
+            this.ClientNameLbl.Name = "ClientNameLbl";
+            this.ClientNameLbl.Size = new System.Drawing.Size(0, 0);
+            this.ClientNameLbl.TabIndex = 31;
+            // 
+            // MateriaisList
+            // 
+            this.MateriaisList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.MateriaisList.FormattingEnabled = true;
+            this.MateriaisList.ItemHeight = 16;
+            this.MateriaisList.Location = new System.Drawing.Point(100, 241);
+            this.MateriaisList.Name = "MateriaisList";
+            this.MateriaisList.Size = new System.Drawing.Size(340, 100);
+            this.MateriaisList.TabIndex = 30;
+            // 
             // MaterialTxt
             // 
             // 
@@ -420,33 +448,6 @@
             this.SaveBtn.Text = "Salvar";
             this.SaveBtn.UseSelectable = true;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
-            // 
-            // MateriaisList
-            // 
-            this.MateriaisList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.MateriaisList.FormattingEnabled = true;
-            this.MateriaisList.ItemHeight = 16;
-            this.MateriaisList.Location = new System.Drawing.Point(100, 241);
-            this.MateriaisList.Name = "MateriaisList";
-            this.MateriaisList.Size = new System.Drawing.Size(340, 100);
-            this.MateriaisList.TabIndex = 30;
-            // 
-            // ClientNameLbl
-            // 
-            this.ClientNameLbl.AutoSize = true;
-            this.ClientNameLbl.Location = new System.Drawing.Point(216, 162);
-            this.ClientNameLbl.Name = "ClientNameLbl";
-            this.ClientNameLbl.Size = new System.Drawing.Size(0, 0);
-            this.ClientNameLbl.TabIndex = 31;
-            // 
-            // ExameBtn
-            // 
-            this.ExameBtn.Location = new System.Drawing.Point(464, 343);
-            this.ExameBtn.Name = "ExameBtn";
-            this.ExameBtn.Size = new System.Drawing.Size(75, 23);
-            this.ExameBtn.TabIndex = 21;
-            this.ExameBtn.Text = "Exames";
-            this.ExameBtn.UseSelectable = true;
             // 
             // ConsultaForm
             // 

@@ -60,6 +60,7 @@
     <Compile Include="Dapper\ContactDapperRepository.cs" />
     <Compile Include="Dapper\ConvenioDapperRepository.cs" />
     <Compile Include="Dapper\DoctorDapperRepository.cs" />
+    <Compile Include="Dapper\ExameDapperRepository.cs" />
     <Compile Include="Dapper\LoginDapperRepository.cs" />
     <Compile Include="Dapper\MaterialDapperRepository.cs" />
     <Compile Include="Dapper\PatientDapperRepository.cs" />

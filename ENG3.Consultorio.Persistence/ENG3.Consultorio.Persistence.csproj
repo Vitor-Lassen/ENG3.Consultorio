@@ -62,6 +62,7 @@
     <Compile Include="Mapping\ContactDapperMap.cs" />
     <Compile Include="Mapping\ConvenioDapperMap.cs" />
     <Compile Include="Mapping\DoctorDapperMap.cs" />
+    <Compile Include="Mapping\ExameDapperRepository.cs" />
     <Compile Include="Mapping\LoginDapperMap.cs" />
     <Compile Include="Mapping\MaterialDapperMap.cs" />
     <Compile Include="Mapping\PatientDapperMap.cs" />

@@ -139,5 +139,18 @@ namespace ENG3.Consultorio.View
             }
            
         }
+
+        private void ExameBtn_Click(object sender, EventArgs e)
+        {
+            int codConsultaId ;
+            if( Int32.TryParse(CodTxt.Text, out codConsultaId)) 
+            {
+                PesquisaExameForm pesquisaExameForm = new PesquisaExameForm(codConsultaId);
+                pesquisaExameForm.ShowDialog();
+            }
+            else{
+                MessageBox.Show("selecione uma consulta antes");
+            }
+        }
     }
 }

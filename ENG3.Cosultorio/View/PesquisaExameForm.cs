@@ -23,12 +23,24 @@ namespace ENG3.Consultorio.View
 
         private void PesquisaExame_Load(object sender, EventArgs e)
         {
+            CarregaGrid();
+        }
+        public void CarregaGrid()
+        {
             Grid.DataSource = _exameDapperRepository.GetExamesByConsultaId(_consultaId).ToList();
+            Grid.Columns[1].Visible = false;
+            Grid.Columns[2].Visible = false;
         }
 
         private void NewBtn_Click(object sender, EventArgs e)
         {
-            ExameForm exameForm = new ExameForm();
+            ExameForm exameForm = new ExameForm(this,_consultaId);
+            exameForm.ShowDialog();
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            ExameForm exameForm = new ExameForm(this,_consultaId);
             exameForm.ShowDialog();
         }
     }

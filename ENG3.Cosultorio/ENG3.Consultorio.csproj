@@ -148,6 +148,9 @@
     <EmbeddedResource Include="View\ConvenioForm.resx">
       <DependentUpon>ConvenioForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ExameForm.resx">
+      <DependentUpon>ExameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\homeForm.resx">
       <DependentUpon>homeForm.cs</DependentUpon>
     </EmbeddedResource>

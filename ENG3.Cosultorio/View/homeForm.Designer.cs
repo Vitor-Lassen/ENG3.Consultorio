@@ -1,6 +1,6 @@
 ﻿namespace ENG3.Consultorio.View
 {
-    partial class homeForm
+    partial class HomeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -105,14 +105,15 @@
             this.AgendaTile.UseSelectable = true;
             this.AgendaTile.Click += new System.EventHandler(this.AgendaTile_Click);
             // 
-            // homeForm
+            // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 408);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "homeForm";
+            this.Name = "HomeForm";
             this.Text = "Clinica";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeForm_FormClosed);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

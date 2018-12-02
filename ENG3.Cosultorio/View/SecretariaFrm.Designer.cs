@@ -127,7 +127,7 @@
             this.SenhaTxt.Location = new System.Drawing.Point(332, 231);
             this.SenhaTxt.MaxLength = 32767;
             this.SenhaTxt.Name = "SenhaTxt";
-            this.SenhaTxt.PasswordChar = '\0';
+            this.SenhaTxt.PasswordChar = 'X';
             this.SenhaTxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.SenhaTxt.SelectedText = "";
             this.SenhaTxt.SelectionLength = 0;

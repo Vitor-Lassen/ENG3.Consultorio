@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ENG3.Consultorio.View
 {
-    public partial class homeForm : MetroFramework.Forms.MetroForm
+    public partial class HomeForm : MetroFramework.Forms.MetroForm
     {
-        public homeForm()
+        public HomeForm()
         {
             InitializeComponent();
             ENG3.Consultorio.Persistence.Configurations.RegisterMappings.Register();
@@ -48,6 +48,11 @@ namespace ENG3.Consultorio.View
         {
             AgendaForm agendaForm = new AgendaForm();
             agendaForm.ShowDialog();
+        }
+
+        private void HomeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

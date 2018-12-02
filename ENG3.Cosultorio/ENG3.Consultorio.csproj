@@ -81,11 +81,17 @@
     <Compile Include="View\ExameForm.Designer.cs">
       <DependentUpon>ExameForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\homeForm.cs">
+    <Compile Include="View\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\homeForm.Designer.cs">
-      <DependentUpon>homeForm.cs</DependentUpon>
+    <Compile Include="View\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MedicoForm.cs">
       <SubType>Form</SubType>
@@ -151,8 +157,11 @@
     <EmbeddedResource Include="View\ExameForm.resx">
       <DependentUpon>ExameForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\homeForm.resx">
-      <DependentUpon>homeForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MedicoForm.resx">
       <DependentUpon>MedicoForm.cs</DependentUpon>
